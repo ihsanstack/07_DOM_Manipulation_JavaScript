@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body>
+    <h1>Days of the week</h1>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+    
+    <script>
+        // Select the parent element with the class 'parent'
+        const parent = document.querySelector('.parent');
+        // console.log(parent); // Logs the entire parent element to the console
+
+        // Access and log the children of the parent element (returns an HTMLCollection)
+        // console.log(parent.children); 
+
+        // Access and log the innerText of the first child element
+        // console.log(parent.children[0].innerText); 
+
+        // Loop through all children of the parent element
+        for (let i = 0; i < parent.children.length; i++) {
+            // console.log(parent.children[i].innerText); // Logs the innerText of each child element
+            // parent.children[i].style.color = 'orange'; // Changes the text color of each child element to orange
+        }
+
+        // Access the first and last child of the parent element
+        // console.log(parent.firstElementChild.innerText); // Logs the innerText of the first child element
+        // console.log(parent.lastElementChild.innerText); // Logs the innerText of the last child element
+
+        // Select a specific child element with the class 'day'
+        // const dayOne = document.querySelector('.day');
+
+        // Navigate from the child element to its parent
+        // console.log(dayOne.parentElement); // Logs the parent element of the child
+
+        // Navigate to the next sibling of the selected child element
+        // console.log(dayOne.nextElementSibling.innerHTML); // Logs the innerHTML of the next sibling element
+
+
+        console.log("Nodes: ", parent.childNodes)
+
+    </script>
+
+</body>
+</html>

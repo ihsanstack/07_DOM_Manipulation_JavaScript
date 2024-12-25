@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element in DOM</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(newlang) {
+        const li = document.createElement('li')
+        li.innerHTML = `${newlang}`
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    addLanguage('Python')
+
+
+
+    function optiLang(addlang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(addlang))
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    optiLang('CPP')
+
+
+
+
+    // Edit
+
+    const secondChild = document.querySelector('.languages :nth-child(2)')
+    console.log(secondChild)
+    const newli = document.createElement('li')
+    newli.textContent = "React.js"
+    secondChild.replaceWith(newli)
+
+
+    const firstChild = document.querySelector('.languages :first-child')
+    firstChild.outerHTML = '<li>TypeScript</li>'
+
+
+
+    // Remove
+
+    const lastChildRemove = document.querySelector('.languages :last-child')
+    lastChildRemove.remove()
+</script>
+</html>

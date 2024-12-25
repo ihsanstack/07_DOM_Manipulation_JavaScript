@@ -1,0 +1,65 @@
+<!-- 
+DOM:
+The Document Object Model (DOM) is a programming interface that allows web developers to interact with and manipulate HTML and XML documents. It represents the structure of a web page as a hierarchical tree of objects, enabling developers to dynamically modify the content, style, and structure of a webpage using programming languages like JavaScript.
+
+Here are the key aspects of the DOM:
+
+1. Representation of the Web Page
+    When a web page is loaded into a browser, the browser creates a DOM tree representing the HTML document.
+    Each part of the HTML (elements, attributes, text) becomes a node in the DOM tree.
+
+
+Example:
+<html>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+
+html
+  └── body
+       ├── h1
+       │     └── Text: "Hello, World!"
+       └── p
+             └── Text: "This is a paragraph."
+
+
+
+2. Manipulation
+JavaScript can be used to:
+
+Select Elements: Find elements in the DOM tree using methods like getElementById, querySelector, or getElementsByClassName.
+Change Content: Update the text or HTML inside an element.
+Change Styles: Modify CSS properties of elements.
+Add/Remove Elements: Dynamically add or delete elements.
+Handle Events: Respond to user actions like clicks or typing.
+
+
+3. Live Updates
+The DOM is a live structure, meaning changes to the DOM (via JavaScript) immediately reflect on the webpage.
+
+
+4. DOM vs HTML
+    HTML: The static code written in the .html file.
+    DOM: The dynamic in-memory representation of the HTML document, which the browser uses to render and interact with the page. -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="title">Welcome To DOM</h1>
+    <button onclick="changeTitle()">Click Me</button>
+
+    <script>
+      function changeTitle() {
+        // Select the element
+        const titleElement = document.getElementById('title');
+        // Modify its content
+        titleElement.textContent = 'Hello, DOM!';
+      }
+    </script>
+  </body>
+</html>
+

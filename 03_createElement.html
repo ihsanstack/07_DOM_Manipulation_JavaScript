@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element in DOM</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+       // Create a new <div> element dynamically
+        const div = document.createElement('div');
+        console.log(div); // Logs the newly created (but empty) <div> element to the console
+
+        // Assign a class name 'main' to the <div> element
+        div.className = 'main';
+
+        // Assign a unique ID to the <div> element using a random number between 1 and 10
+        div.id = Math.floor(Math.random() * 10 + 1);
+
+        // Add a 'title' attribute to the <div> with the value "This is main div"
+        div.setAttribute('title', "This is main div");
+
+        // Optionally set the inner text of the <div> (commented out here)
+        // div.innerText = 'Code with Ihsan';
+
+        // Create a text node with the content "Create text node"
+        const addText = document.createTextNode("Create text node");
+
+        // Append the text node to the <div> element
+        div.appendChild(addText);
+
+        // Apply inline CSS styles to the <div>
+        div.style.backgroundColor = 'Green'; // Set background color to green
+        div.style.padding = '20px'; // Add 20px padding around the content
+
+        // Append the styled <div> to the <body> of the document
+        document.querySelector('body').appendChild(div);
+
+
+
+        const container = document.querySelector('.container')
+        const peragraph = document.createElement('p')
+        peragraph.innerText = "Java Script is awesome"
+        container.appendChild(peragraph)
+
+    </script>
+<!-- 
+appendChild()
+The appendChild() method is used to add a node (element or text) as the last child of a specified parent element in the DOM. It attaches the node to the DOM tree, making it visible on the webpage if the parent is rendered.
+
+
+Syntax:
+parentElement.appendChild(childElement);
+
+ -->
+
+</body>
+</html>
